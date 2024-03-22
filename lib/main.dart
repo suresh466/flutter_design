@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text(_flutterText)],
+            children: <Widget>[ Text(_flutterText) ],
           ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -100,6 +100,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
-
