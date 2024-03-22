@@ -35,7 +35,19 @@ class _MyHomePageState extends State<MyHomePage> {
   String _myText = "Hello World";
   String? _myImage = "galaxy.jpeg";
   String _textState = "";
+  String _flutterText = "My First Application";
 
+  void _helloWorld() {
+    setState(() {
+      _flutterText = "Hello World";
+    });
+  }
+
+  void _goodByeWorld() {
+    setState(() {
+      _flutterText = "Goodbye World";
+    });
+  }
   void _changeText() {
     setState(() {
       _myText = "Goodbye World";
