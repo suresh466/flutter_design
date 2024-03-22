@@ -90,8 +90,8 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedButton(onPressed: () => _helloWorld(), child: const Text('Hello')),
-                ElevatedButton(onPressed: () => _goodByeWorld(), child: const Text('Goodbye')),
+                ElevatedButton(onPressed: _helloWorld, child: const Text('Hello')),
+                ElevatedButton(onPressed: _goodByeWorld, child: const Text('Goodbye')),
               ]
             )
           ],
