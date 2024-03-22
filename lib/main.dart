@@ -82,65 +82,24 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-
-            Text(_textState),
-            TextField(controller: _controller),
+          children: [
+            Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text(_flutterText)],
+          ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children:[
-                Text(
-                  _myText,
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
-                ElevatedButton(onPressed: _changeText,
-                  child:
-                  const Text("Goodbye!"),)
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
               children: [
-                Image(
-                    image: AssetImage(
-                        "images/$_myImage"
-                    )
-                ),
-
-              ],
-            ),
-            ListTile(
-              title: const Text("Galaxy"),
-              leading: Radio (
-                  value: "galaxy.jpeg",
-                  groupValue: _myImage,
-                  onChanged: (String? value) {
-                    setState(() {
-                      _myImage = value;
-                    });
-                  }
-              ),
-            ),
-            ListTile(
-              title: const Text("iPhone"),
-              leading: Radio (
-                  value: "iphone.jpeg",
-                  groupValue: _myImage,
-                  onChanged: (String? value) {
-                    setState(() {
-                      _myImage = value;
-                    });
-                  }
-              ),
-            ),
+                ElevatedButton(onPressed: () => _helloWorld(), child: const Text('Hello')),
+                ElevatedButton(onPressed: () => _goodByeWorld(), child: const Text('Goodbye')),
+              ]
+            )
           ],
         ),
       ),
     );
   }
 }
-
 
 
 
